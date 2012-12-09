@@ -1,6 +1,6 @@
 
-VFD.Clock - digital clock based on Vacuum Fluorescent Display.
-Copyright (C) 2008~2012 Dariusz Iwanoczko (dariusz.iwanoczko@gmail.com)
+ VFD.Clock
+ Digital clock based on Vacuum Fluorescent Display.
 
 0. License
 -----------
@@ -12,38 +12,54 @@ Copyright (C) 2008~2012 Dariusz Iwanoczko (dariusz.iwanoczko@gmail.com)
 1. Preamble
 ------------
     <TODO>
-    
-2. How to use this code?
+
+2. How to get this code?
 -------------------------
- To use this code You will need git program installed if You want to
- clone this repo and make own patch to the project, or simply download
- it by clicking at ZIP button at the top of Github page, to download
- zip package with all files.
+ You can get it code in 2 ways:
+  - download it by clicking at ZIP button at the top of Github page.
+  - using git clone instruction.
 
- After download it just compile the code using 'make' command.
- Makefile will generate the hex file, which You can programm into MCU
- using 'make program' command. Makefile using avrdude software to push
- the hex file inside the AVR.
+ In a second case You nedd to install on Your computer git software.
+ If You are Linux OS user please install few package listed above:
+    - git-core
+    - gitk
+    - gettext
 
- Yo can clean the code using 'make clean'.
-    
-3. Fuse bits
+ After that, in a folder where You want to save sources, please type:
+
+ > git clone https://github.com/divano/VFD.Clock.git
+
+3. How to use this code?
+-------------------------
+ How You want to. This is standard procedure to compile program for AVR
+ microcontrolors.
+
+ Type 'make all' to compile the sources.
+ Type 'make program' to flash the hex file into AVR.
+ Type 'make clean' to clean all temporary generated files.
+
+4. Fuse bits
 -------------
- In CONFIG file You can find fuse values.
+ In CONFIG file You can find fuse bits values.
  To set the fuse bits in MCU, You have to run in example:
 
  > avrdude -c usbasp -p atmega8515 -U lfuse:w:0x1f:m
  > avrdude -c usbasp -p atmega8515 -U hfuse:w:0xd9:m
 
-4. Known problems
+5. Known problems
 ------------------
  No one. Please fill this chapter if found anyone.
  
-5. Version history
+6. Version history
 -------------------
- Version 2.0: Current.
+ Version 2.0:
+    Current release.
 
-6. Thanks to
+ Version 1.0 (oscilate about 2005 year):
+    Old release. You can find this source code at:
+        http://elportal.pl/index.php?module=ContentExpress&func=display&ceid=241
+
+7. Thanks to
 -------------
  From beginning of this project, there are two persons without which this
  project will never see the sun light. In first release of this programm,
