@@ -1,0 +1,57 @@
+
+VFD.Clock - digital clock based on Vacuum Fluorescent Display.
+Copyright (C) 2008~2012 Dariusz Iwanoczko (dariusz.iwanoczko@gmail.com)
+
+0. License
+-----------
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+1. Preamble
+------------
+    <TODO>
+    
+2. How to use this code?
+-------------------------
+ To use this code You will need git program installed if You want to
+ clone this repo and make own patch to the project, or simply download
+ it by clicking at ZIP button at the top of Github page, to download
+ zip package with all files.
+
+ After download it just compile the code using 'make' command.
+ Makefile will generate the hex file, which You can programm into MCU
+ using 'make program' command. Makefile using avrdude software to push
+ the hex file inside the AVR.
+
+ Yo can clean the code using 'make clean'.
+    
+3. Fuse bits
+-------------
+ In CONFIG file You can find fuse values.
+ To set the fuse bits in MCU, You have to run in example:
+
+ > avrdude -c usbasp -p atmega8515 -U lfuse:w:0x1f:m
+ > avrdude -c usbasp -p atmega8515 -U hfuse:w:0xd9:m
+
+4. Known problems
+------------------
+ No one. Please fill this chapter if found anyone.
+ 
+5. Version history
+-------------------
+ Version 2.0: Current.
+
+6. Thanks to
+-------------
+ From beginning of this project, there are two persons without which this
+ project will never see the sun light. In first release of this programm,
+ the main programm file contained followed comments:
+
+ "Program is dedicated for two persons: AP & NB
+  Without who, my world would be gray and boring...
+  Thank You Very Much !!!"
+
+ And once again I would like to say big Thank You to You both. It is true
+ that without you both this program would never created.
